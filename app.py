@@ -1,15 +1,14 @@
 import streamlit as st
 import numpy as np
-import tensorflow as tf
-from sklearn.preprocessing import MinMaxScaler
-import pandas as pd
+from tensorflow.keras.models import load_model
 import matplotlib.pyplot as plt
 
 # -----------------------------
 # Load Model
 # -----------------------------
 
-model = tf.keras.models.load_model("titanic_ann_model.h5")
+# model = tf.keras.models.load_model("titanic_ann_model.h5")
+model = load_model("titanic_ann_model.h5")
 
 # -----------------------------
 # Streamlit Page Config
