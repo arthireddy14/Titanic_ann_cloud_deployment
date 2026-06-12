@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 # Load Model
 # -----------------------------
 
-# model = tf.keras.models.load_model("titanic_ann_model.h5")
 model = load_model("titanic_ann_model.h5")
 
 # -----------------------------
@@ -45,6 +44,8 @@ The model uses:
 - Passenger Class
 - Age
 - Fare
+
+Titanic Survival Prediction System is a Deep Learning-based web application that predicts the likelihood of a passenger surviving a Titanic-like emergency situation. The model uses passenger information such as Passenger Class (Pclass), Age, and Fare to estimate survival probability. Historical Titanic data shows that passengers in higher classes, younger individuals, and those with higher ticket fares generally had better chances of survival. The application is powered by an Artificial Neural Network (ANN) built using TensorFlow and deployed through Streamlit, providing real-time predictions and visualizations of survival probability.
 """)
 
 # -----------------------------
@@ -58,7 +59,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     pclass = st.selectbox(
         "Passenger Class",
-        [1, 2, 3]
+        ["1-Higher class","2-Middle class","3-Lower class"]
     )
 
 with col2:
@@ -81,7 +82,7 @@ with col3:
 # -----------------------------
 
 # Training dataset min/max assumptions
-
+pclass=int(pclass[0])
 pclass_norm = (pclass - 1) / (3 - 1)
 age_norm = (age - 0) / (80 - 0)
 fare_norm = (fare - 0) / (512 - 0)
