@@ -1,6 +1,5 @@
 streamlit
-tensorflow==2.15.0
-numpy==1.26.4
+tensorflow-cpu==2.16.1
+numpy
 matplotlib
-protobuf==4.25.3
-h5py
+h5pys
