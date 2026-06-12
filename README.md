@@ -142,6 +142,18 @@ Users can provide:
 * Generates survival probability
 * Displays prediction result
 
+## Outputs
+
+### Home Page
+![Home Page](images/homepage_image.png)
+
+### Survival Prediction
+![Survived](images/survived_output.png)
+
+### Non-Survival Prediction
+![Not Survived](images/not_survived_output.png)
+
+
 #### Visualization
 
 * Survival Probability Chart
